@@ -17,12 +17,16 @@ repositories {
 }
 
 dependencies {
+	implementation(platform("com.google.cloud:spring-cloud-gcp-dependencies:4.1.1"))
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("mysql:mysql-connector-java:8.0.32")
+	implementation("com.google.cloud:spring-cloud-gcp-starter-sql-mysql")
+	implementation("org.springframework.cloud:spring-cloud-gcp-starter:1.2.8.RELEASE")
+	implementation("org.springframework.cloud:spring-cloud-gcp-starter-sql-mysql:1.2.8.RELEASE")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
