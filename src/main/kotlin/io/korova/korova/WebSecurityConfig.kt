@@ -18,7 +18,7 @@ class WebSecurityConfig {
   @Order(1)
   @Bean
   fun apiFilterChain(http: HttpSecurity): SecurityFilterChain {
-    http.authorizeHttpRequests()
+    http.authorizeRequests()
       .requestMatchers("/css/**").permitAll()
       .requestMatchers("/korova/**").hasAuthority("ROLE_ADMIN")
       .requestMatchers("/user/**").hasAuthority("ROLE_USER")
